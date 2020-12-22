@@ -35,10 +35,4 @@ public class HomeController {
 
 		return "home";
 	}
-
-	@RequestMapping("/main.do")
-	public String main(Model model) {
-
-		return "main";
-	}
 }
