@@ -22,10 +22,10 @@
 
 #content{
 	width: 100%;
-	height: 1000px;
 	padding: 5px;
 	margin-right: 5px;
 	float: left;
+	text-align: left;
 	border: 0px solid #bcbcbc;
 }
 
