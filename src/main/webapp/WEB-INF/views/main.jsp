@@ -8,34 +8,43 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/sliderStyle.css" />
 
-
 </head>
 <body>
+	<div class="slide_outer_wrap">
+		<div class="slide_wrapper">
+			<h3 class="subject">박스오피스</h3>
+			<ul class="slides">
+				<c:forEach var="dto" items="${list }">
+				<li>
+					<a href="">
+						<div class="movie_img">
+							<c:choose>
+								<c:when test="${dto.movie_img == null }">
+									<img src="http://placehold.it/250x360"/>
+								</c:when>
+								<c:otherwise>
+									<img src="${dto.movie_img }" >
+								</c:otherwise>
+							</c:choose>
+						</div>
+						<div class="movie_detail">
+							<p class="title">${dto.movie_title }</p>
+							<p class="spec">${dto.movie_releasedate } / ${dto.movie_nation }</p>
+							<p class="spec">평점 : ★${dto.movie_point }</p>
+						</div>
+					</a>
+					</li>
+				</c:forEach>
+					
 
-	<%-- 	<h1>메인페이지 입니다.</h1>
-	<c:forEach var="dto" items="${list }">
- 		${dto.movie_title } <br />
-	
-	</c:forEach> --%>
-	<div class="slide_wrapper">
-		<ul class="slides">
-			<li><img src="http://placehold.it/300x300" alt=""></li>
-			<li><img src="http://placehold.it/300x300" alt=""></li>
-			<li><img src="http://placehold.it/300x300" alt=""></li>
-			<li><img src="http://placehold.it/300x300" alt=""></li>
-			<li><img src="http://placehold.it/300x300" alt=""></li>
-			<li><img src="http://placehold.it/300x300" alt=""></li>
-			<li><img src="http://placehold.it/300x300" alt=""></li>
-			<li><img src="http://placehold.it/300x300" alt=""></li>
-
-		</ul>
+			</ul>
+		</div>
+		<span id="prev"></span>
+		<span id="next"></span>
 
 	</div>
-	<p class="controls">
-		<span class="prev">prev</span>
-		<span class="next">next</span>
-	</p>
-	
+
+
 	<script src="resources/script/sliderScript.js"></script>
 </body>
 </html>

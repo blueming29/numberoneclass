@@ -5,7 +5,7 @@
 
 <mapper namespace="movie.rec.no1class.dao.MovieDao">
 	<select id="list" resultType="movie.rec.no1class.dto.MovieDto">
-		SELECT * FROM MOVIE_LIST WHERE MOVIE_POINT > 9.5 ORDER BY CAST(MOVIE_POINT AS NUMBER) DESC
+		SELECT * FROM MOVIE_LIST WHERE MOVIE_POINT BETWEEN 9.8 AND 9.92 ORDER BY CAST(MOVIE_POINT AS NUMBER) DESC
 	</select>
 
 
