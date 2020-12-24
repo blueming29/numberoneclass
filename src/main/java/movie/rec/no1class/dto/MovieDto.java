@@ -7,21 +7,20 @@ public class MovieDto {
 	private String movie_img;
 	private int movie_code;
 	private String movie_title;
-	private String movie_point;
+	private double movie_point;
 	private String movie_genre;
 	private String movie_nation;
 	private String movie_runtime;
-	private String movie_releasedate;
+	private int movie_releasedate;
 	private String movie_director;
 	private String movie_actor;
 	private String movie_content;
 	public MovieDto() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public MovieDto(String movie_img, int movie_code, String movie_title, String movie_point, String movie_genre,
-			String movie_nation, String movie_runtime, String movie_releasedate, String movie_director,
-			String movie_actor, String movie_content) {
+	public MovieDto(String movie_img, int movie_code, String movie_title, double movie_point, String movie_genre,
+			String movie_nation, String movie_runtime, int movie_releasedate, String movie_director, String movie_actor,
+			String movie_content) {
 		super();
 		this.movie_img = movie_img;
 		this.movie_code = movie_code;
@@ -35,6 +34,7 @@ public class MovieDto {
 		this.movie_actor = movie_actor;
 		this.movie_content = movie_content;
 	}
+	
 
 	
 }

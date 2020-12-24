@@ -100,7 +100,7 @@ img {
 
 #prev{
 	background-image: url("../img/angle-left-solid.svg");
-	margin-left: -680px;
+	margin-left: -685px;
 }
 /* 
 #prev:hover {
@@ -108,7 +108,7 @@ img {
 }
  */
 #next{
-	margin-left: 645px;
+	margin-left: 650px;
 	background-image: url("../img/angle-right-solid.svg");
 
 }
