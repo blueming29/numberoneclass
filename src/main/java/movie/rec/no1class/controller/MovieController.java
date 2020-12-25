@@ -24,7 +24,6 @@ public class MovieController {
 		ArrayList<MovieDto> dtos = new ArrayList<MovieDto>();
 		MovieBoxOfficeCrawler code_crawler = new MovieBoxOfficeCrawler();
 		ArrayList<String> movie_code = code_crawler.getMovieCode();
-		System.out.println(movie_code.size());
 		
 		for(int i = 0; i < movie_code.size() ; i++) {
 			MovieDto dto = dao.get_inform(Integer.parseInt(movie_code.get(i)));

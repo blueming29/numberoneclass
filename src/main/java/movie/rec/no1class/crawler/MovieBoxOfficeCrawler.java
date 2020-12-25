@@ -21,7 +21,6 @@ public class MovieBoxOfficeCrawler {
 				String movie_code = titleLink.substring(titleLink.indexOf("=") + 1, titleLink.length());
 				movie_codes.add(movie_code);
 			}
-			System.out.println(movie_codes);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

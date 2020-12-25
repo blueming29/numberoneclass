@@ -13,34 +13,47 @@
 	<div class="slide_outer_wrap">
 		<div class="slide_wrapper">
 			<h3 class="subject">박스오피스</h3>
-			<ul class="slides">
-				<c:forEach var="dto" items="${list }">
-				<li>
-					<a href="">
-						<div class="movie_img">
-							<c:choose>
-								<c:when test="${dto.movie_img == null }">
-									<img src="http://placehold.it/250x360"/>
-								</c:when>
-								<c:otherwise>
-									<img src="${dto.movie_img }" >
-								</c:otherwise>
-							</c:choose>
-						</div>
-						<div class="movie_detail">
-							<p class="title">${dto.movie_title }</p>
-							<p class="spec">${dto.movie_releasedate } / ${dto.movie_nation }</p>
-							<p class="spec">평점 : ★${dto.movie_point }</p>
-						</div>
-					</a>
-					</li>
-				</c:forEach>
-					
-
-			</ul>
+			<div class=slide_container>
+				<ul class="slides">
+				<% int i = 1; %>
+					<c:forEach var="dto" items="${list }" >
+					<li>
+						<a href="">
+							<div class="movie_img_container">
+								<c:choose>
+									<c:when test="${dto.movie_img == null }">
+										<img class="movie_img" src="http://placehold.it/250x360"/>
+									</c:when>
+									<c:otherwise>
+										<img class="movie_img" src="${dto.movie_img }" />
+									</c:otherwise>
+								</c:choose>
+								<% 
+									if(i <= 10) {
+								%>
+									<div class="ranking_badge">
+										<%= i %>					
+									</div>
+								
+								<%
+										i++;
+									}
+								%>
+								
+							</div>
+							<div class="movie_detail">
+								<p class="title">${dto.movie_title }</p>
+								<p class="spec">${dto.movie_releasedate } / ${dto.movie_nation }</p>
+								<p class="spec">평점 ★ ${dto.movie_point }</p>
+							</div>
+						</a>
+						</li>
+					</c:forEach>
+				</ul>
+				<div class="prev"></div>
+				<div class="next"></div>
+			</div>
 		</div>
-		<span id="prev"></span>
-		<span id="next"></span>
 
 	</div>
 
