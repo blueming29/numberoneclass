@@ -6,17 +6,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="resources/css/sliderStyle.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="resources/script/all.min.js"></script>
+<script src="resources/script/bxSlider.js"></script>
+<link rel="stylesheet" href="resources/css/bxSlider.css" />
 
 </head>
 <body>
-	<div class="slide_outer_wrap">
-		<div class="slide_wrapper">
-			<h3 class="subject">박스오피스</h3>
-			<div class=slide_container>
-				<ul class="slides">
+	<div class="mainListContainer">
+		<div class="mainListTitleRow">
+			<p class="mainListTitle">박스오피스</p>
+		</div>
+		<div class="slideWrap boxoffice">
+			<ul class="multiple_slider">
 				<% int i = 1; %>
-					<c:forEach var="dto" items="${list }" >
+				<c:forEach var="dto" items="${list }" >
 					<li>
 						<a href="">
 							<div class="movie_img_container">
@@ -43,21 +48,14 @@
 							</div>
 							<div class="movie_detail">
 								<p class="title">${dto.movie_title }</p>
-								<p class="spec">${dto.movie_releasedate } / ${dto.movie_nation }</p>
-								<p class="spec">평점 ★ ${dto.movie_point }</p>
+								<p class="spec">${dto.movie_releasedate }<span class="on_display"> / ${dto.movie_nation }</span></p>
+								<p class="spec"><span class="on_display">평점</span> ★ ${dto.movie_point }</p>
 							</div>
 						</a>
-						</li>
-					</c:forEach>
-				</ul>
-				<div class="prev"></div>
-				<div class="next"></div>
-			</div>
+					</li>
+				</c:forEach>
+			</ul>
 		</div>
-
 	</div>
-
-
-	<script src="resources/script/sliderScript.js"></script>
 </body>
 </html>
