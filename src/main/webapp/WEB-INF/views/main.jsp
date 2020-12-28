@@ -19,7 +19,7 @@
 			<p class="mainListTitle">박스오피스</p>
 		</div>
 		<div class="slideWrap boxoffice">
-			<ul class="multiple_slider">
+			<ul class="boxoffice_slider">
 				<% int i = 1; %>
 				<c:forEach var="dto" items="${list }" >
 					<li>
@@ -30,20 +30,15 @@
 										<img class="movie_img" src="http://placehold.it/250x360"/>
 									</c:when>
 									<c:otherwise>
-										<img class="movie_img" src="${dto.movie_img }" />
+										<img class="movie_img" src="${dto.movie_img}" />
 									</c:otherwise>
 								</c:choose>
-								<% 
-									if(i <= 10) {
-								%>
+								<% if(i <= 10) { %>
 									<div class="ranking_badge">
 										<%= i %>					
 									</div>
 								
-								<%
-										i++;
-									}
-								%>
+								<% i++; } %>
 								
 							</div>
 							<div class="movie_detail">

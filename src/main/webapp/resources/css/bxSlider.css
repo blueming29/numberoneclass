@@ -1,10 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Noto Sans KR, sans-serif;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Noto Sans KR, sans-serif;
 }
 
-a{
+a {
 	color: #0c0c0c;
 	text-decoration: none;
 }
@@ -13,85 +13,86 @@ div {
 	display: block;
 }
 
-.mainListContainer{
+.mainListContainer {
 	position: relative;
 	margin-bottom: 40px;
 	padding: 0 20px;
 }
 
-.mainListTitleRow{
+.mainListTitleRow {
 	position: relative;
-    max-width: 1320px;
-    padding: 12px 0 14px;
-    margin: 0 auto;
+	max-width: 1320px;
+	padding: 12px 0 14px;
+	margin: 0 auto;
 }
 
-.mainListTitle{
+.mainListTitle {
 	position: relative;
 	color: #0c0c0c;
 	font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-    line-height: 30px;
+	font-weight: 700;
+	letter-spacing: -0.4px;
+	line-height: 30px;
 }
 
 .slideWrap {
-    position: relative;
-    max-width: 1320px;
-    margin: 0 auto;    
+	position: relative;
+	max-width: 1320px;
+	margin: 0 auto;
 }
 
 .boxoffice .bx-prev, .boxoffice .bx-next {
-    position: absolute;
-    background-repeat: no-repeat;
+	position: absolute;
+	background-repeat: no-repeat;
 	background-position: 50%;
 	background-size: 30%;
-    top: 40%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    text-indent: -9999px;
-    box-shadow: 0 1px 3px 0;
+	top: 40%;
+	transform: translateY(-50%);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #fff;
+	text-indent: -9999px;
+	box-shadow: 0 1px 3px 0;
 }
 
 .boxoffice .bx-prev {
-    right: 99%;
-    background-image: url("../img/angle-left-solid.svg");
+	right: 99%;
+	background-image: url("../img/angle-left-solid.svg");
 }
 
 .boxoffice .bx-next {
-    left: 98%;
+	left: 98%;
 	background-image: url("../img/angle-right-solid.svg");
 }
 
 .boxoffice .bx-prev:hover, .boxoffice .bx-next:hover {
 	background-color: #eee;
 }
-.multiple_slider li img{
-    width: 100%;
-   	border-radius: 4px;
+
+.boxoffice_slider li img {
+	width: 100%;
+	border-radius: 4px;
 }
 
-.ranking_badge{
+.ranking_badge {
 	position: absolute;
-    top: 4px;
-    left: 4px;
-    background-color: black;
-    color: white;
-    font-weight: 700;
-    letter-spacing: normal;
-    font-size: 18px;
-    line-height: 27px;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-    opacity: 0.8;
+	top: 4px;
+	left: 4px;
+	background-color: black;
+	color: white;
+	font-weight: 700;
+	letter-spacing: normal;
+	font-size: 18px;
+	line-height: 27px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+	opacity: 0.8;
 }
 
-.movie_detail{
+.movie_detail {
 	position: relative;
 	width: 100%;
 	height: auto;
@@ -104,17 +105,21 @@ p.title {
 	font-weight: bold;
 }
 
-p.spec{
+p.spec {
 	font-size: 0.9em;
 	font-family: Rix오늘의만화;
 }
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 760px) {
 	.boxoffice .bx-prev, .boxoffice .bx-next {
-	   	display: none;
-	}
-	
-	.on_display{
 		display: none;
+	}
+	.on_display {
+		display: none;
+	}
+	.mainListContainer {
+		padding: 0;
+		margin-left: 1%;
+		margin-right: 2%;
 	}
 }

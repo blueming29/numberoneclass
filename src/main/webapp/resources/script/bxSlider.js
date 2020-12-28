@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".multiple_slider").bxSlider({
+    $(".boxoffice_slider").bxSlider({
         minSlides: 3,
         maxSlides: 5,
         //moveSlides: 1,
