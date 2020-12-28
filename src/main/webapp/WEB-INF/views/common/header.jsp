@@ -10,16 +10,25 @@
 <body>
 	<table border="0" width="100%">
 		<tr>
-			<td><a href="main.do">No.1 CLASS</a></td>
-			<td><h1>sample_header</h1></td>
+			<td><a href="main.do"><img src="resources/image/movielex.png" /></a></td>
+			<td><h1></h1></td>
+			
+			  <td> 
+    <input type="search" name="keyword" placeholder="키워드를 입력하세요">
+    <input type="submit" value="검색">
+    </td>
+			 
+			
+			
 			<td>
 				<c:choose>
 					<c:when test="${isLogOn == true && member != null}">
 						<h3>${member.name }님 환영합니다. | </h3>
-						<h3><a href="">로그아웃</a></h3>
+						<h3><a href="#">로그아웃</a></h3>
 					</c:when>
 					<c:otherwise>
-						<h3><a href="">로그인</a></h3>
+						<h3><a href="#">로그인</a></h3>
+						<h3><a href="#">회원가입</a></h3>
 					</c:otherwise>
 				</c:choose>
 			

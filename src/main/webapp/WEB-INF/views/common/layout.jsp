@@ -17,7 +17,7 @@
 	padding: 5px;
 	margin-bottom: 5px;
 	border: 0px solid #bcbcbc;
-	background-color: lightgreen;
+	background-color: white;
 }
 
 #content{
@@ -31,7 +31,7 @@
 	clear: both;
 	padding: 5px;
 	border: 0px solid #bcbcbc;
-	background-color: lightblue;
+	background-color: black;
 }
 </style>
 
