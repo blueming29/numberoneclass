@@ -21,18 +21,21 @@ public class MovieController {
 	public String main(Model model) {
 		MovieDao dao = sqlSession.getMapper(MovieDao.class);
 		
-		ArrayList<MovieDto> dtos = new ArrayList<MovieDto>();
+		ArrayList<MovieDto> boxoffice_dtos = new ArrayList<MovieDto>();
 		MovieBoxOfficeCrawler code_crawler = new MovieBoxOfficeCrawler();
 		ArrayList<String> movie_code = code_crawler.getMovieCode();
 		
 		for(int i = 0; i < movie_code.size() ; i++) {
-			MovieDto dto = dao.get_inform(Integer.parseInt(movie_code.get(i)));
+			MovieDto dto = dao.get_boxoffice(Integer.parseInt(movie_code.get(i)));
 
 			if(dto != null) {
-				dtos.add(dto);
+				boxoffice_dtos.add(dto);
 			}
 		}
-		model.addAttribute("list", dtos);
+		model.addAttribute("boxofficeList", boxoffice_dtos);
+				
+		ArrayList<MovieDto> starPoint_dtos = dao.get_starPoint();
+		model.addAttribute("starPoint", starPoint_dtos);
 
 		return "main";
 	}

@@ -18,10 +18,49 @@
 		<div class="mainListTitleRow">
 			<p class="mainListTitle">박스오피스</p>
 		</div>
-		<div class="slideWrap boxoffice">
+		<div class="slideWrap">
 			<ul class="boxoffice_slider">
 				<% int i = 1; %>
-				<c:forEach var="dto" items="${list }" >
+				<c:forEach var="dto" items="${boxofficeList }" >
+					<li>
+						<a href="">
+							<div class="movie_img_container">
+								<c:choose>
+									<c:when test="${dto.movie_img == null }">
+										<img class="movie_img" src="http://placehold.it/250x360"/>
+									</c:when>
+									<c:otherwise>
+										<img class="movie_img" src="${dto.movie_img}" />
+									</c:otherwise>
+								</c:choose>
+								<% if(i <= 10) { %>
+									<div class="ranking_badge">
+										<%= i %>					
+									</div>
+								
+								<% i++; } %>
+								
+							</div>
+							<div class="movie_detail">
+								<p class="title">${dto.movie_title }</p>
+								<p class="spec">${dto.movie_releasedate }<span class="on_display"> / ${dto.movie_nation }</span></p>
+								<p class="spec"><span class="on_display">평점</span> ★ ${dto.movie_point }</p>
+							</div>
+						</a>
+					</li>
+				</c:forEach>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="mainListContainer">
+		<div class="mainListTitleRow">
+			<p class="mainListTitle">네티즌 평점 순</p>
+		</div>
+		<div class="slideWrap">
+			<ul class="point_slider">
+				<% i = 1; %>
+				<c:forEach var="dto" items="${starPoint }" >
 					<li>
 						<a href="">
 							<div class="movie_img_container">
