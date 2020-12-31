@@ -39,4 +39,10 @@ public class MovieController {
 
 		return "main";
 	}
+	
+	// bootstrap-modal 테스트
+	@RequestMapping("/modal")
+	public String modal() {
+		return "modal";
+	}
 }

@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -23,7 +24,7 @@
 				<% int i = 1; %>
 				<c:forEach var="dto" items="${boxofficeList }" >
 					<li>
-						<a href="">
+						<a href="modal">
 							<div class="movie_img_container">
 								<c:choose>
 									<c:when test="${dto.movie_img == null }">
